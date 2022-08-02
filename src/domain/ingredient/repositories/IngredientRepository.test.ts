@@ -1,4 +1,5 @@
 import IngredientToSaveDTO from '../dtos/IngredientToSaveDTO';
+import Ingredient from '../entities/Ingredient';
 import IngredientRepositoryMock from './IngredientRepositoryMock';
 
 describe('Ingredient Repository', () => {
@@ -16,7 +17,7 @@ describe('Ingredient Repository', () => {
 
     const ingredientSaved = await sutIngredientRepository.save(ingredientToSave);
 
-    expect(ingredientSaved).toEqual({
+    expect(ingredientSaved).toEqual<Ingredient>({
       Id: 1,
       Name: 'Chesse',
       Calories: 300,
