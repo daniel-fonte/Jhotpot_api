@@ -1,7 +1,8 @@
 {
     "env": {
         "es2021": true,
-        "node": true
+        "node": true,
+        "jest": true
     },
     "extends": [
         "plugin:@typescript-eslint/eslint-recommended",
@@ -17,10 +18,29 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "rules": {
+            "import/extensions": [
+              "error",
+              "ignorePackages",
+              {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+              }
+        ]
     },
     "ignorePatterns": [
         "./*.(js|ts)",
         "./*.config.ts",
         "./tsconfig.json"
-    ]
+    ],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "paths": ["src"],
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
+    }
 }
