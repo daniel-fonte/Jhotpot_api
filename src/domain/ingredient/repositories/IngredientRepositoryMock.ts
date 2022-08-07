@@ -11,10 +11,10 @@ class IngredientRepositoryMock implements IIngredientRepository {
       Name: ingredient.Name,
       Calories: ingredient.Calories,
       Created_At: ingredient.Created_At,
-      Updated_At: ingredient.Updated_At
-    })
+      Updated_At: ingredient.Updated_At,
+    });
 
-    return this.database[0]
+    return this.database[0];
   }
 }
 

@@ -12,7 +12,7 @@ describe('Ingredient Repository', () => {
       Name: 'Chesse',
       Calories: 300,
       Created_At: currentDate,
-      Updated_At: currentDate
+      Updated_At: currentDate,
     };
 
     const ingredientSaved = await sutIngredientRepository.save(ingredientToSave);
