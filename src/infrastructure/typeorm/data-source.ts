@@ -4,10 +4,10 @@ import { DataSource } from 'typeorm';
 const AppDataSource = new DataSource({
   type: 'mysql',
   host: 'localhost',
-  port: 5432,
+  port: 3306,
   username: 'test',
-  password: 'test',
-  database: 'test',
+  password: 'password',
+  database: 'jhotpot',
   synchronize: true,
   logging: false,
   entities: ['src/infrastructure/typeorm/entities/*.ts'],

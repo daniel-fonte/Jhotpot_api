@@ -1,0 +1,14 @@
+version: "3.4"
+
+services:
+  database:
+    image: mysql:5.7
+    container_name: jhotpot_database
+    restart: always
+    environment:
+      MYSQL_DATABASE: "jhotpot"   
+      MYSQL_USER: "test"
+      MYSQL_PASSWORD: "password"
+      MYSQL_ROOT_PASSWORD: "test"
+    ports:
+      - 3306:3306
